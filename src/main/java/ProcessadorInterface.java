@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
 public interface ProcessadorInterface {
+    void processar(PacoteRede pacote);
+
+    int getPacotesProcessados();
 }

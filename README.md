@@ -2,16 +2,16 @@
 
 Atividade da disciplina de **Sistemas Operacionais**.
 
-> 🚧 **Em desenvolvimento** — o repositório contém a estrutura inicial do projeto.
+Simulação de processamento concorrente de pacotes de rede: uma fila compartilhada (`BlockingQueue`) é consumida por múltiplas threads processadoras, ilustrando concorrência e balanceamento de carga.
 
-## Estrutura planejada
+## Estrutura
 
 | Classe | Descrição |
 |---|---|
-| `PacoteRede` | Representa um pacote de rede a ser processado |
+| `PacoteRede` | Pacote de rede imutável (id, origem, destino, tamanho) |
 | `ProcessadorInterface` | Contrato do processador de pacotes |
-| `Processador` | Implementação do processamento |
-| `Main` | Ponto de entrada |
+| `Processador` | Processa pacotes simulando custo proporcional ao tamanho; contador thread-safe |
+| `Main` | Cria a fila de pacotes e distribui entre 3 threads processadoras |
 
 ## Tecnologias
 
